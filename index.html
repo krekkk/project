@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASET EDITKU — Gudang Aset Meme &amp; Video</title>
+<meta name="description" content="Koleksi 54 aset edit meme & video, text-only. Link Google Drive bisa kamu edit sendiri di index.html.">
+
+<!--
+  ============================================================
+   CARA EDIT — baca dulu bang
+   1. LINK DRIVE : cari href="https://drive.google.com/" lalu
+                   ganti dengan link Google Drive kamu.
+   2. NAMA ASET  : teks di dalam tag h3, ganti sesukanya.
+   3. NAMBAH ASET: copy satu blok article class="card", tempel
+                   di atas penutup section grid, ubah angka +
+                   data-cat (meme/overlay/transisi/sfx/font/
+                   preset/footage/tekstur/musik).
+   4. HAPUS ASET : hapus satu blok article class="card".
+   5. FONT & TEMA: mau ganti warna? buka style.css, ubah
+                   bagian :root. Mau ganti font? ganti link
+                   Google Fonts di bawah.
+   Catatan: kartu ini TEXT-ONLY, nggak ada gambar sama sekali.
+   ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979..2050&family=Big+Shoulders+Display:wght@100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.card{opacity:1!important;transform:none!important}.boot{display:none!important}</style></noscript>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- boot: loading singkat ala software editing (auto hilang kalau JS mati) -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <p class="boot-kicker">MEMUAT GUDANG ASET</p>
+    <p class="boot-num" id="bootNum">00</p>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+    <p class="boot-sub">JANGAN DITUTUP // SEDANG BACA FILE</p>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<div class="cursor" id="curRing" aria-hidden="true"><span>BUKA ↗</span></div>
+<div class="cursor-dot" id="curDot" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#">ASET<span>/</span>EDITKU</a>
+  <div class="topbar-right">
+    <span class="hud-item rec"><i class="rec-dot"></i>REC</span>
+    <span class="hud-item" id="timecode">00:00:00:00</span>
+    <span class="hud-item hide-sm">4K · 24FPS</span>
+    <span class="hud-item hide-sm">SLOT <b>54</b>/54</span>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>MEME PACK ★ OVERLAY ★ TRANSISI ★ SFX ★ FONT ★ PRESET ★ FOOTAGE ★ TEKSTUR ★ MUSIK ★ EDIT SENDIRI LINKNYA ★ </span>
+    <span>MEME PACK ★ OVERLAY ★ TRANSISI ★ SFX ★ FONT ★ PRESET ★ FOOTAGE ★ TEKSTUR ★ MUSIK ★ EDIT SENDIRI LINKNYA ★ </span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hud">
+      <span class="hud-item"><i class="rec-dot"></i>LIVE BIN</span>
+      <span class="hud-item">54 SLOT</span>
+      <span class="hud-item">9 BIN</span>
+      <span class="hud-item">SOURCE: GOOGLE DRIVE</span>
+    </div>
+
+    <h1 class="hero-title" id="heroTitle">
+      <span class="l1">SEMUA ASET</span>
+      <span class="l2">EDIT KU</span>
+    </h1>
+    <span class="sticker">54 FILE</span>
+
+    <div class="deck">
+      <div class="wave" id="wave" aria-hidden="true"></div>
+      <p class="lede">
+        Daftar aset buat editan meme &amp; video — murni teks, tanpa gambar,
+        biar enteng dan fokus ke link. Tiap tombol nembak ke Google Drive,
+        linknya bisa kamu tulis sendiri di <code>index.html</code>.
+        Tekan <kbd>/</kbd> buat nyari.
+      </p>
+    </div>
+  </section>
+
+  <div class="ruler" aria-hidden="true">
+    <i class="playhead"></i>
+    <span class="ruler-tag">TIMELINE</span>
+  </div>
+
+  <section class="controls" aria-label="filter aset">
+    <div class="searchbox">
+      <label for="q">CARI</label>
+      <input id="q" type="search" placeholder="nama aset..." autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <div class="chips" id="chips">
+      <button class="chip is-on" data-cat="all">SEMUA</button>
+      <button class="chip" data-cat="meme">MEME</button>
+      <button class="chip" data-cat="overlay">OVERLAY</button>
+      <button class="chip" data-cat="transisi">TRANSISI</button>
+      <button class="chip" data-cat="sfx">SFX</button>
+      <button class="chip" data-cat="font">FONT</button>
+      <button class="chip" data-cat="preset">PRESET</button>
+      <button class="chip" data-cat="footage">FOOTAGE</button>
+      <button class="chip" data-cat="tekstur">TEKSTUR</button>
+      <button class="chip" data-cat="musik">MUSIK</button>
+    </div>
+    <p class="count"><span id="count">54</span> ASET TAMPIL<span class="blink">_</span></p>
+  </section>
+
+  <section class="grid" id="grid">
+
+    <!-- ============ BIN: MEME ============ -->
+
+    <!-- ASET 01 -->
+    <article class="card" data-cat="meme" data-name="meme template klasik">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">01</span><span class="tag">MEME</span></div>
+        <h3>Meme Template Klasik</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 02 -->
+    <article class="card" data-cat="meme" data-name="rage face pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">02</span><span class="tag">MEME</span></div>
+        <h3>Rage Face Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 03 -->
+    <article class="card" data-cat="meme" data-name="wojak starter pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">03</span><span class="tag">MEME</span></div>
+        <h3>Wojak Starter Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 04 -->
+    <article class="card" data-cat="meme" data-name="brainrot clip pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">04</span><span class="tag">MEME</span></div>
+        <h3>Brainrot Clip Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 05 -->
+    <article class="card" data-cat="meme" data-name="shitpost template">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">05</span><span class="tag">MEME</span></div>
+        <h3>Shitpost Template</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 06 -->
+    <article class="card" data-cat="meme" data-name="caption font pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">06</span><span class="tag">MEME</span></div>
+        <h3>Caption Font Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: OVERLAY ============ -->
+
+    <!-- ASET 07 -->
+    <article class="card" data-cat="overlay" data-name="glitch overlay">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">07</span><span class="tag">OVERLAY</span></div>
+        <h3>Glitch Overlay</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 08 -->
+    <article class="card" data-cat="overlay" data-name="vhs noise overlay">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">08</span><span class="tag">OVERLAY</span></div>
+        <h3>VHS Noise Overlay</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 09 -->
+    <article class="card" data-cat="overlay" data-name="light leak pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">09</span><span class="tag">OVERLAY</span></div>
+        <h3>Light Leak Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 10 -->
+    <article class="card" data-cat="overlay" data-name="film grain 4k">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">10</span><span class="tag">OVERLAY</span></div>
+        <h3>Film Grain 4K</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 11 -->
+    <article class="card" data-cat="overlay" data-name="countdown leader">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">11</span><span class="tag">OVERLAY</span></div>
+        <h3>Countdown Leader</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 12 -->
+    <article class="card" data-cat="overlay" data-name="censor bar blur pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">12</span><span class="tag">OVERLAY</span></div>
+        <h3>Censor Bar / Blur Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: TRANSISI ============ -->
+
+    <!-- ASET 13 -->
+    <article class="card" data-cat="transisi" data-name="whip pan transitions">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">13</span><span class="tag">TRANSISI</span></div>
+        <h3>Whip Pan Transitions</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 14 -->
+    <article class="card" data-cat="transisi" data-name="zoom punch pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">14</span><span class="tag">TRANSISI</span></div>
+        <h3>Zoom Punch Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 15 -->
+    <article class="card" data-cat="transisi" data-name="flash glitch transition">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">15</span><span class="tag">TRANSISI</span></div>
+        <h3>Flash Glitch Transition</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 16 -->
+    <article class="card" data-cat="transisi" data-name="smooth zoom preset">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">16</span><span class="tag">TRANSISI</span></div>
+        <h3>Smooth Zoom Preset</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 17 -->
+    <article class="card" data-cat="transisi" data-name="paper rip transition">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">17</span><span class="tag">TRANSISI</span></div>
+        <h3>Paper Rip Transition</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 18 -->
+    <article class="card" data-cat="transisi" data-name="rgb split transition">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">18</span><span class="tag">TRANSISI</span></div>
+        <h3>RGB Split Transition</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: SFX ============ -->
+
+    <!-- ASET 19 -->
+    <article class="card" data-cat="sfx" data-name="vine boom pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">19</span><span class="tag">SFX</span></div>
+        <h3>Vine Boom Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 20 -->
+    <article class="card" data-cat="sfx" data-name="hitmarker sfx">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">20</span><span class="tag">SFX</span></div>
+        <h3>Hitmarker SFX</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 21 -->
+    <article class="card" data-cat="sfx" data-name="record scratch">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">21</span><span class="tag">SFX</span></div>
+        <h3>Record Scratch</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 22 -->
+    <article class="card" data-cat="sfx" data-name="whoosh risers pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">22</span><span class="tag">SFX</span></div>
+        <h3>Whoosh &amp; Risers</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 23 -->
+    <article class="card" data-cat="sfx" data-name="meme sfx legends">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">23</span><span class="tag">SFX</span></div>
+        <h3>Meme SFX Legends</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 24 -->
+    <article class="card" data-cat="sfx" data-name="error notification sfx">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">24</span><span class="tag">SFX</span></div>
+        <h3>Error / Notification SFX</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: FONT ============ -->
+
+    <!-- ASET 25 -->
+    <article class="card" data-cat="font" data-name="underrated font pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">25</span><span class="tag">FONT</span></div>
+        <h3>Underrated Font Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 26 -->
+    <article class="card" data-cat="font" data-name="condensed display fonts">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">26</span><span class="tag">FONT</span></div>
+        <h3>Condensed Display Fonts</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 27 -->
+    <article class="card" data-cat="font" data-name="handwritten drip font">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">27</span><span class="tag">FONT</span></div>
+        <h3>Handwritten Drip Font</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 28 -->
+    <article class="card" data-cat="font" data-name="pixel bitmap font">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">28</span><span class="tag">FONT</span></div>
+        <h3>Pixel / Bitmap Font</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 29 -->
+    <article class="card" data-cat="font" data-name="retro poster font">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">29</span><span class="tag">FONT</span></div>
+        <h3>Retro Poster Font</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 30 -->
+    <article class="card" data-cat="font" data-name="signature font pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">30</span><span class="tag">FONT</span></div>
+        <h3>Signature Font Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: PRESET ============ -->
+
+    <!-- ASET 31 -->
+    <article class="card" data-cat="preset" data-name="color grade retro">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">31</span><span class="tag">PRESET</span></div>
+        <h3>Color Grade Retro</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 32 -->
+    <article class="card" data-cat="preset" data-name="snap zoom preset">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">32</span><span class="tag">PRESET</span></div>
+        <h3>Snap Zoom Preset</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 33 -->
+    <article class="card" data-cat="preset" data-name="speed ramp preset">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">33</span><span class="tag">PRESET</span></div>
+        <h3>Speed Ramp Preset</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 34 -->
+    <article class="card" data-cat="preset" data-name="shake camera roll">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">34</span><span class="tag">PRESET</span></div>
+        <h3>Shake / Camera Roll</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 35 -->
+    <article class="card" data-cat="preset" data-name="caption auto style">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">35</span><span class="tag">PRESET</span></div>
+        <h3>Caption Auto Style</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 36 -->
+    <article class="card" data-cat="preset" data-name="thumbnail preset pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">36</span><span class="tag">PRESET</span></div>
+        <h3>Thumbnail Preset Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: FOOTAGE ============ -->
+
+    <!-- ASET 37 -->
+    <article class="card" data-cat="footage" data-name="green screen meme clips">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">37</span><span class="tag">FOOTAGE</span></div>
+        <h3>Green Screen Meme Clips</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 38 -->
+    <article class="card" data-cat="footage" data-name="stock b-roll pendek">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">38</span><span class="tag">FOOTAGE</span></div>
+        <h3>Stock B-Roll Pendek</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 39 -->
+    <article class="card" data-cat="footage" data-name="screen record pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">39</span><span class="tag">FOOTAGE</span></div>
+        <h3>Screen Record Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 40 -->
+    <article class="card" data-cat="footage" data-name="webcam reaction pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">40</span><span class="tag">FOOTAGE</span></div>
+        <h3>Webcam Reaction Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 41 -->
+    <article class="card" data-cat="footage" data-name="drone b-roll">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">41</span><span class="tag">FOOTAGE</span></div>
+        <h3>Drone B-Roll</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 42 -->
+    <article class="card" data-cat="footage" data-name="cursor ui recording">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">42</span><span class="tag">FOOTAGE</span></div>
+        <h3>Cursor / UI Recording</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: TEKSTUR ============ -->
+
+    <!-- ASET 43 -->
+    <article class="card" data-cat="tekstur" data-name="paper texture pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">43</span><span class="tag">TEKSTUR</span></div>
+        <h3>Paper Texture Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 44 -->
+    <article class="card" data-cat="tekstur" data-name="concrete backdrop">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">44</span><span class="tag">TEKSTUR</span></div>
+        <h3>Concrete Backdrop</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 45 -->
+    <article class="card" data-cat="tekstur" data-name="crt scanline texture">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">45</span><span class="tag">TEKSTUR</span></div>
+        <h3>CRT / Scanline Texture</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 46 -->
+    <article class="card" data-cat="tekstur" data-name="dust scratch 4k">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">46</span><span class="tag">TEKSTUR</span></div>
+        <h3>Dust &amp; Scratch 4K</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 47 -->
+    <article class="card" data-cat="tekstur" data-name="gradient mesh pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">47</span><span class="tag">TEKSTUR</span></div>
+        <h3>Gradient Mesh Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 48 -->
+    <article class="card" data-cat="tekstur" data-name="sticker doodle pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">48</span><span class="tag">TEKSTUR</span></div>
+        <h3>Sticker / Doodle Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ============ BIN: MUSIK ============ -->
+
+    <!-- ASET 49 -->
+    <article class="card" data-cat="musik" data-name="lofi beat intro">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">49</span><span class="tag">MUSIK</span></div>
+        <h3>Lo-Fi Beat Untuk Intro</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 50 -->
+    <article class="card" data-cat="musik" data-name="phonk loop pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">50</span><span class="tag">MUSIK</span></div>
+        <h3>Phonk Loop Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 51 -->
+    <article class="card" data-cat="musik" data-name="suspense sting">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">51</span><span class="tag">MUSIK</span></div>
+        <h3>Suspense Sting</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 52 -->
+    <article class="card" data-cat="musik" data-name="ending theme pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">52</span><span class="tag">MUSIK</span></div>
+        <h3>Ending Theme Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 53 -->
+    <article class="card" data-cat="musik" data-name="royalty free bgm">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">53</span><span class="tag">MUSIK</span></div>
+        <h3>Royalty Free BGM</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+    <!-- ASET 54 -->
+    <article class="card" data-cat="musik" data-name="vocal sfx pack">
+      <i class="sweep"></i>
+      <div class="info">
+        <div class="row"><span class="idx">54</span><span class="tag">MUSIK</span></div>
+        <h3>Vocal / Voice Pack</h3>
+        <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="btn-label">Buka di Drive</span><span class="btn-arrow">↗</span></a>
+      </div>
+    </article>
+
+  </section>
+
+  <p class="empty" id="empty" hidden>// TIDAK ADA ASET YANG COCOK — COBA KATA KUNCI LAIN</p>
+
+  <section class="howto">
+    <div class="howto-head">
+      <h2>Cara Edit</h2>
+      <span class="howto-badge">5 LANGKAH · 2 MENIT</span>
+    </div>
+    <ol>
+      <li>Buka <code>index.html</code> pakai Notepad / VS Code / apa aja.</li>
+      <li>Cari <code>https://drive.google.com/</code> — itu link contoh. Ganti dengan link Drive kamu.</li>
+      <li>Nama aset ada di tag <code>h3</code>, nomor slot ada di <code>class="idx"</code>.</li>
+      <li>Nambah aset: copy satu blok <code>article class="card"</code>, tempel di baris paling bawah grid, ubah isinya.</li>
+      <li>Warna &amp; font diatur di <code>style.css</code> (bagian <code>:root</code>) dan link Google Fonts di <code>index.html</code>.</li>
+    </ol>
+    <p class="howto-foot">
+      Shortcut: tekan <kbd>/</kbd> buat fokus ke kolom pencarian, <kbd>Esc</kbd> buat keluar.
+      Situs ini murni teks — nggak ada gambar sama sekali, jadi loadingnya instan.
+    </p>
+  </section>
+
+</main>
+
+<div class="marquee marquee--rev" aria-hidden="true">
+  <div class="marquee-track">
+    <span>SEMUA LINK BISA KAMU EDIT SENDIRI ★ BUKA INDEX.HTML ★ GANTI LINK DRIVE ★ TAMBAH ASET SEBANYAK YANG KAMU MAU ★ </span>
+    <span>SEMUA LINK BISA KAMU EDIT SENDIRI ★ BUKA INDEX.HTML ★ GANTI LINK DRIVE ★ TAMBAH ASET SEBANYAK YANG KAMU MAU ★ </span>
+  </div>
+</div>
+
+<footer class="foot">
+  <span>ASET/EDITKU © 2026</span>
+  <span>54 ASET · 9 BIN</span>
+  <span>FONT: CLIMATE CRISIS · BIG SHOULDERS · SOMETYPE MONO</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
